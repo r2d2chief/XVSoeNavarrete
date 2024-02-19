@@ -353,11 +353,12 @@
 <script>
   // Function to open WhatsApp with the message
   function openWhatsApp() {
+    var number = "1234567890"; // Coloca aquí el número al que deseas enviar el mensaje
     var name = document.getElementById('name').value;
     var attending = document.getElementById('event').value === "1" ? "Sí, asistiré." : "No podré asistir.";
     var message = "Hola Soe, soy: " + name + ". Y confirmo que: " + attending;
     var encodedMessage = encodeURIComponent(message);
-    var whatsappURL = "https://wa.me/?text=" + encodedMessage;
+    var whatsappURL = "https://wa.me/" + number + "?text=" + encodedMessage;
     window.open(whatsappURL);
   }
 
@@ -367,6 +368,7 @@
     openWhatsApp();
   });
 </script>
+
 	
 	<!-- Start Footer -->
 	<footer class="footer-box">
